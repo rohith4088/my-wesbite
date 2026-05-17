@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  portfolio:
+    # Build the image using the Dockerfile in the current directory
+    build: .
+    container_name: rohith-portfolio
+    ports:
+      # Map port 8080 on your local machine to port 80 in the container
+      - "8080:80"
+    restart: unless-stopped
